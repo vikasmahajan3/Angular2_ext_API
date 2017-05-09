@@ -43,7 +43,7 @@ Older versions produce errors.
 
 We recommend [nvm](https://github.com/creationix/nvm) for managing multiple versions of node and npm.
 
-## Create a new project based on the QuickStart
+<!--## Create a new project based on the QuickStart
 
 Clone this repo into new project folder (e.g., `my-proj`).
 ```shell
@@ -96,7 +96,7 @@ Create a *remote repository* for this project on the service of your choice.
 Grab its address (e.g. *`https://github.com/<my-org>/my-proj.git`*) and push the *local repo* to the *remote*.
 ```shell
 git remote add origin <repo-address>
-git push -u origin master
+git push -u origin master-->
 ```
 ## Install npm packages
 
