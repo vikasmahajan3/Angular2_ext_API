@@ -1,4 +1,4 @@
-# Angular QuickStart Source
+<!--# Angular QuickStart Source
 [![Build Status][travis-badge]][travis-badge-url]
 
 This repository holds the TypeScript source code of the [angular.io quickstart](https://angular.io/docs/ts/latest/quickstart.html),
@@ -28,7 +28,7 @@ You can update your existing project to an up-to-date QuickStart by following th
 - Copy over any other files you added to your project
 - Copy your old `.git` folder into your new project's root
 
-Now you can continue working on the new project.
+Now you can continue working on the new project.-->
 
 ## Prerequisites
 
