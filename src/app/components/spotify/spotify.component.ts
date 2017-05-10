@@ -16,8 +16,9 @@ export class SpotifyComponent implements OnInit {
     searchMusic() {
         this._spotifyService.SearchMusic(this.searchStr).subscribe((res: any) => {
             console.log(res);
-            this.searchRes = res.artist.items;
-        }, (error) => { },
-            () => { console.log('ONCompleted'); })
+            this.searchRes = res.artists.items;
+        },
+         (error) => { },
+         () => { console.log('ONCompleted'); });
     }
 }
