@@ -1,0 +1,8 @@
+<h1> Need Music?</h1>
+<p> use this app to browse new releases and find your favourite songs<br> </p>
+<form>
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="search your favourite artist..." [(ngModel)]="searchStr" name="searchStr"
+      (keyup)=searchMusic()/>
+  </div>
+</form>

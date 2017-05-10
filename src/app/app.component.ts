@@ -17,14 +17,14 @@ import { ProfileService } from './components/profile/profile.service'
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
+            <li ><a routerLink="/">Home</a></li>
+            <li><a routerLink="/spotify">Spotify</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <div class="container"><profile></profile></div>`,
+    <div class="container"><router-outlet></router-outlet></div>`,
   providers: [ProfileService]
 })
 export class AppComponent { name = 'Angular'; }
