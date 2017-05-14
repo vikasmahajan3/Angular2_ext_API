@@ -20,6 +20,10 @@ var SpotifyService = (function () {
         var url = 'https://api.spotify.com/v1/search?query=' + str + '&offset=0&limit=20&type=' + type + '&market=US';
         return this._http.get(url).map(function (res) { return res.json(); });
     };
+    SpotifyService.prototype.getArtist = function (artistID) {
+        var url = 'https://api.spotify.com/v1/artists/' + artistID;
+        return this._http.get(url).map(function (res) { return res.json(); });
+    };
     return SpotifyService;
 }());
 SpotifyService = __decorate([
