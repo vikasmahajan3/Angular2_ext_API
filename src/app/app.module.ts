@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { routing } from './app.routing';
 import { SpotifyComponent } from './components/spotify/spotify.component';
+import { ArtistComponent } from './components/artist/artist.component';
 
 @NgModule({
   imports: [BrowserModule, HttpModule, FormsModule, routing],
-  declarations: [AppComponent, ProfileComponent, SpotifyComponent],
+  declarations: [AppComponent, ProfileComponent, SpotifyComponent, ArtistComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

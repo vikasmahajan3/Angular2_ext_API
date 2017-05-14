@@ -15,12 +15,12 @@ export class ProfileService {
         this.userName = username;
     }
     getUser() {
-        return this._http.get('http://api.github.com/users/' + this.userName + '?client_id='
+        return this._http.get('https://api.github.com/users/' + this.userName + '?client_id='
             + this.client_Id + '&client_secret=' + this.client_secret).map(
             (res) => res.json());
     }
     getRepos() {
-        return this._http.get('http://api.github.com/users/' + this.userName + '/repos?client_id='
+        return this._http.get('https://api.github.com/users/' + this.userName + '/repos?client_id='
             + this.client_Id + '&client_secret=' + this.client_secret).map(
             (res) => res.json());
     }
