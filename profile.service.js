@@ -22,11 +22,11 @@ var ProfileService = (function () {
         this.userName = username;
     };
     ProfileService.prototype.getUser = function () {
-        return this._http.get('http://api.github.com/users/' + this.userName + '?client_id='
+        return this._http.get('https://api.github.com/users/' + this.userName + '?client_id='
             + this.client_Id + '&client_secret=' + this.client_secret).map(function (res) { return res.json(); });
     };
     ProfileService.prototype.getRepos = function () {
-        return this._http.get('http://api.github.com/users/' + this.userName + '/repos?client_id='
+        return this._http.get('https://api.github.com/users/' + this.userName + '/repos?client_id='
             + this.client_Id + '&client_secret=' + this.client_secret).map(function (res) { return res.json(); });
     };
     return ProfileService;
