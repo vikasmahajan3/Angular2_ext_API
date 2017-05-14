@@ -13,7 +13,7 @@ import { ProfileService } from './components/profile/profile.service'
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">GitHub Profile</a>
+          <a class="navbar-brand" routerLink="/">External API</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
