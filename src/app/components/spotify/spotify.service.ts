@@ -12,4 +12,12 @@ export class SpotifyService {
         let url = 'https://api.spotify.com/v1/artists/' + artistID;
         return this._http.get(url).map(res => res.json());
     }
+    getAlbums(artistID: string) {
+        let url = 'https://api.spotify.com/v1/artists/' + artistID + '/albums';
+        return this._http.get(url).map(res => res.json());
+    }
+    getAlbum(albumID: string) {
+        let url = 'https://api.spotify.com/v1/albums/' + albumID;
+        return this._http.get(url).map(res => res.json());
+    }
 }

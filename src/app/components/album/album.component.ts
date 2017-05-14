@@ -5,14 +5,14 @@ import { Artist } from '../models/artist';
 import { SpotifyService } from '../spotify/spotify.service';
 @Component({
     selector: 'artist',
-    templateUrl: './artist.component.html',
-    styleUrls: ['./artist.component.scss'],
+    templateUrl: './album.component.html',
+    //styleUrls: ['./album.component.scss'],
     providers: [SpotifyService]
 })
-export class ArtistComponent implements OnInit {
+export class AlbumComponent implements OnInit {
     id: string;
-    artist: Artist[];
-    albums: any[];
+
+    album: any[];
     constructor(private _spotifyService: SpotifyService
         , private router: Router
         , private activeRoute: ActivatedRoute) { }
@@ -22,14 +22,11 @@ export class ArtistComponent implements OnInit {
             this.id = params['id'];
         })
         console.log(this.id, 'id');
-        this._spotifyService.getArtist(this.id).subscribe((res) => {
-            this.artist = res;
-            console.log(res);
-        });
-        this._spotifyService.getAlbums(this.id).subscribe((res) => {
-            this.albums = res.items;
-             console.log(res);
+        this._spotifyService.getAlbum(this.id).subscribe((res: any) => {
+            this.album = res;
+            console.log(res)
         })
+
     }
 
 }
