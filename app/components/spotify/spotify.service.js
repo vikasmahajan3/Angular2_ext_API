@@ -24,6 +24,14 @@ var SpotifyService = (function () {
         var url = 'https://api.spotify.com/v1/artists/' + artistID;
         return this._http.get(url).map(function (res) { return res.json(); });
     };
+    SpotifyService.prototype.getAlbums = function (artistID) {
+        var url = 'https://api.spotify.com/v1/artists/' + artistID + '/albums';
+        return this._http.get(url).map(function (res) { return res.json(); });
+    };
+    SpotifyService.prototype.getAlbum = function (albumID) {
+        var url = 'https://api.spotify.com/v1/albums/' + albumID;
+        return this._http.get(url).map(function (res) { return res.json(); });
+    };
     return SpotifyService;
 }());
 SpotifyService = __decorate([
