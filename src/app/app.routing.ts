@@ -4,12 +4,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { ArtistComponent } from './components/artist/artist.component';
 import { AlbumComponent } from './components/album/album.component';
+import { MovieFinderComponent } from './components/moviefinder/moviefinder.component';
 const appRoutes: Routes = [
     {
         path: '', component: ProfileComponent
     },
     {
         path: 'spotify', component: SpotifyComponent
+    },
+    {
+        path: 'moviefinder', component: MovieFinderComponent
     },
     {
         path: 'artist/:id', component: ArtistComponent

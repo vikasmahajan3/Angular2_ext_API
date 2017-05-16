@@ -17,9 +17,9 @@ import { ProfileService } from './components/profile/profile.service'
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li ><a routerLink="/">Home</a></li>
-            <li><a routerLink="/spotify">Spotify</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li ><a routerLink="/">Profile</a></li>
+            <li><a routerLink="/spotify">Music</a></li>
+            <li><a routerLink="/moviefinder">Movie</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
