@@ -15,6 +15,7 @@ var app_routing_1 = require("./app.routing");
 var spotify_component_1 = require("./components/spotify/spotify.component");
 var artist_component_1 = require("./components/artist/artist.component");
 var album_component_1 = require("./components/album/album.component");
+var moviefinder_component_1 = require("./components/moviefinder/moviefinder.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -22,8 +23,13 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, app_routing_1.routing],
-        declarations: [app_component_1.AppComponent, profile_component_1.ProfileComponent, spotify_component_1.SpotifyComponent, artist_component_1.ArtistComponent, album_component_1.AlbumComponent],
+        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, http_1.JsonpModule, forms_1.FormsModule, app_routing_1.routing],
+        declarations: [app_component_1.AppComponent,
+            profile_component_1.ProfileComponent,
+            spotify_component_1.SpotifyComponent,
+            artist_component_1.ArtistComponent,
+            album_component_1.AlbumComponent,
+            moviefinder_component_1.MovieFinderComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
