@@ -36,6 +36,15 @@ var MoviesService = (function () {
         console.log(obj.getMonth(), 'obj');
         return obj.getFullYear().toString() + '-' + (obj.getMonth() + 1) + '-' + obj.getDate().toString();
     };
+    MoviesService.prototype.serachMovie = function (searchStr) {
+        var url = 'https://api.themoviedb.org/3/search/movie?callback=JSONP_CALLBACK&query='
+            + searchStr + '&sort_by=popularity.desc&api_key=' + this.api_key;
+        return this._jsonp.get(url).map(function (res) { return res.json(); });
+    };
+    MoviesService.prototype.getMovie = function (id) {
+        var url = 'https://api.themoviedb.org/3/movie/' + id + '?callback=JSONP_CALLBACK&api_key=' + this.api_key;
+        return this._jsonp.get(url).map(function (res) { return res.json(); });
+    };
     return MoviesService;
 }());
 MoviesService = __decorate([

@@ -23,6 +23,16 @@ var MovieFinderComponent = (function () {
             _this.moviesInTheatre = res.results;
         });
     };
+    MovieFinderComponent.prototype.srachMovie = function () {
+        var _this = this;
+        console.log(this.searchStr);
+        this._moviesService.serachMovie(this.searchStr).subscribe(function (res) {
+            console.log(res.results);
+            _this.searchRes = res.results;
+        });
+    };
+    MovieFinderComponent.prototype.getMovie = function (id) {
+    };
     return MovieFinderComponent;
 }());
 MovieFinderComponent = __decorate([

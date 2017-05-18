@@ -5,6 +5,7 @@ var router_1 = require("@angular/router");
 var artist_component_1 = require("./components/artist/artist.component");
 var album_component_1 = require("./components/album/album.component");
 var moviefinder_component_1 = require("./components/moviefinder/moviefinder.component");
+var movie_details_component_1 = require("./components/movie-details/movie-details.component");
 var appRoutes = [
     {
         path: '', component: profile_component_1.ProfileComponent
@@ -20,6 +21,9 @@ var appRoutes = [
     },
     {
         path: 'album/:id', component: album_component_1.AlbumComponent
+    },
+    {
+        path: 'movie-details/:id', component: movie_details_component_1.MovieDetailsComponent
     }
 ];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);

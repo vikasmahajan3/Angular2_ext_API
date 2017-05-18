@@ -16,6 +16,7 @@ var spotify_component_1 = require("./components/spotify/spotify.component");
 var artist_component_1 = require("./components/artist/artist.component");
 var album_component_1 = require("./components/album/album.component");
 var moviefinder_component_1 = require("./components/moviefinder/moviefinder.component");
+var movie_details_component_1 = require("./components/movie-details/movie-details.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -29,7 +30,7 @@ AppModule = __decorate([
             spotify_component_1.SpotifyComponent,
             artist_component_1.ArtistComponent,
             album_component_1.AlbumComponent,
-            moviefinder_component_1.MovieFinderComponent],
+            moviefinder_component_1.MovieFinderComponent, movie_details_component_1.MovieDetailsComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
