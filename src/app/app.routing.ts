@@ -5,6 +5,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { ArtistComponent } from './components/artist/artist.component';
 import { AlbumComponent } from './components/album/album.component';
 import { MovieFinderComponent } from './components/moviefinder/moviefinder.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 const appRoutes: Routes = [
     {
         path: '', component: ProfileComponent
@@ -20,6 +21,9 @@ const appRoutes: Routes = [
     },
     {
         path: 'album/:id', component: AlbumComponent
+    },
+    {
+        path: 'movie-details/:id', component: MovieDetailsComponent
     }
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

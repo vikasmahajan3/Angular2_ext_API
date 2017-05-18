@@ -10,6 +10,8 @@ import { MoviesService } from '../moviefinder/moviefinder.service';
 export class MovieFinderComponent implements OnInit {
     popularMovies: any;
     moviesInTheatre: any;
+    searchStr: string;
+    searchRes: any;
     constructor(private _moviesService: MoviesService) {
     }
 
@@ -20,5 +22,15 @@ export class MovieFinderComponent implements OnInit {
         this._moviesService.getInTheatre().subscribe((res: any) => {
             this.moviesInTheatre = res.results;
         });
+    }
+    srachMovie() {
+        console.log(this.searchStr)
+        this._moviesService.serachMovie(this.searchStr).subscribe((res: any) => {
+            console.log(res.results);
+            this.searchRes = res.results;
+        });
+    }
+    getMovie(id:string){
+
     }
 }

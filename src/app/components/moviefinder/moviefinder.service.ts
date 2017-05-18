@@ -29,4 +29,15 @@ export class MoviesService {
         console.log(obj.getMonth(), 'obj');
         return obj.getFullYear().toString() + '-' + (obj.getMonth() + 1) + '-' + obj.getDate().toString();
     }
+
+    serachMovie(searchStr: string) {
+        let url = 'https://api.themoviedb.org/3/search/movie?callback=JSONP_CALLBACK&query='
+            + searchStr + '&sort_by=popularity.desc&api_key=' + this.api_key;
+        return this._jsonp.get(url).map(res => res.json());
+
+    }
+    getMovie(id: string) {
+        let url = 'https://api.themoviedb.org/3/movie/' + id + '?callback=JSONP_CALLBACK&api_key=' + this.api_key;
+        return this._jsonp.get(url).map(res => res.json());
+    } 
 }

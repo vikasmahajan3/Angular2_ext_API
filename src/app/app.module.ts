@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule,JsonpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -9,14 +9,15 @@ import { SpotifyComponent } from './components/spotify/spotify.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { AlbumComponent } from './components/album/album.component';
 import { MovieFinderComponent } from './components/moviefinder/moviefinder.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 @NgModule({
-  imports: [BrowserModule, HttpModule,JsonpModule, FormsModule, routing],
+  imports: [BrowserModule, HttpModule, JsonpModule, FormsModule, routing],
   declarations: [AppComponent,
     ProfileComponent,
     SpotifyComponent,
     ArtistComponent,
     AlbumComponent,
-    MovieFinderComponent],
+    MovieFinderComponent, MovieDetailsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
