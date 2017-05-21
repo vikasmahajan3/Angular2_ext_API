@@ -1,6 +1,40 @@
-<h1>Map </h1>
-<p> use this to get the location using angular 2 map </p>
+<div class="row">
+  <div class="col-md-12">
+    <h1>Map </h1>
+    <p> use this to get the location using angular 2 google map </p>
 
-<sebm-google-map [latitude]="lat" [longitude]="lng">
-  <sebm-google-map-marker [latitude]="lat" [longitude]="lng"></sebm-google-map-marker>
-</sebm-google-map>
+    <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" (mapClick)="mapClickd($event)">
+
+      <sebm-google-map-marker *ngFor="let marker of markers; let i=index" [latitude]="marker.lat" [longitude]="marker.lng" (markerClick)="markerClickd(marker,i)"
+        (dragEnd)="markerDragEnd(marker,$event)" [markerDraggable]="marker.draggable ">
+        <sebm-google-map-info-window><strong>{{marker.name}}</strong>
+        <br/>
+        <a class="delete" (click)="removeMarker(marker)">Delete</a>
+        </sebm-google-map-info-window>
+      </sebm-google-map-marker>
+    </sebm-google-map>
+
+
+    <div class="panel panel-default" style="margin-top:10px">
+      <div class="panel-heading">
+        <h3 class="panel-title">Add New marker</h3>
+      </div>
+      <div class="panel-body">
+        <form (submit)= "addMarker()">
+          <label> Location Name</label>
+          <input type="text" claas="form-control" [(ngModel)]="markerName" name="markerName" />
+          <label> Latitude</label>
+          <input type="text" claas="form-control" [(ngModel)]="markerLat" name="markerLat" />
+          <label> Longitude</label>
+          <input type="text" claas="form-control" [(ngModel)]="markerLng" name="markerLng" />
+          <label> Draggable</label>
+          <select [(ngModel)]="markerDraggable" claas="form-control" name="markerDraggable">
+                  <option value="no">No </option>
+                  <option value="yes">Yes </option>
+          </select>
+          <input type="submit" value="Map">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
