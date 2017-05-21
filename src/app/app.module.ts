@@ -10,13 +10,23 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { AlbumComponent } from './components/album/album.component';
 import { MovieFinderComponent } from './components/moviefinder/moviefinder.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { AgmCoreModule } from 'angular2-google-maps/core';
+import { MapComponent } from './components/map/map.component';
+
 @NgModule({
-  imports: [BrowserModule, HttpModule, JsonpModule, FormsModule, routing],
+  imports: [BrowserModule,
+    HttpModule,
+    JsonpModule,
+    FormsModule,
+    routing,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCpXwB_ZlZgDFLP2506bxbNQMq0-gXBCM8'
+    })],
   declarations: [AppComponent,
     ProfileComponent,
     SpotifyComponent,
     ArtistComponent,
-    AlbumComponent,
+    AlbumComponent, MapComponent,
     MovieFinderComponent, MovieDetailsComponent],
   bootstrap: [AppComponent]
 })

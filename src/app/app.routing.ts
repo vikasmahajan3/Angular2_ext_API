@@ -6,6 +6,7 @@ import { ArtistComponent } from './components/artist/artist.component';
 import { AlbumComponent } from './components/album/album.component';
 import { MovieFinderComponent } from './components/moviefinder/moviefinder.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { MapComponent } from './components/map/map.component';
 const appRoutes: Routes = [
     {
         path: '', component: ProfileComponent
@@ -24,6 +25,9 @@ const appRoutes: Routes = [
     },
     {
         path: 'movie-details/:id', component: MovieDetailsComponent
+    },
+    {
+        path: 'map', component: MapComponent
     }
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

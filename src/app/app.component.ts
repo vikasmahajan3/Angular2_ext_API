@@ -20,6 +20,7 @@ import { ProfileService } from './components/profile/profile.service'
             <li ><a routerLink="/">Profile</a></li>
             <li><a routerLink="/spotify">Music</a></li>
             <li><a routerLink="/moviefinder">Movie</a></li>
+             <li><a routerLink="/map">MapIt</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
